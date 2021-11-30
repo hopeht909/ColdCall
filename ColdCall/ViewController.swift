@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     let nameList: [String] = ["Uyanga", "Courtny" ,"Jay" , "Bryant", "Jimmy" , "Cody", "Ryota"]
     
-    var currentName = 0
+    var currentName = Int.random(in: 0...6)
     
     @IBAction func buttonCallPressed(_ sender: UIButton) {
         if(currentName < nameList.count - 1){
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
                }
               
                else{
-                   currentName = 0
+                   currentName = Int.random(in: 0...6)
                }
                updateLable()
     }
